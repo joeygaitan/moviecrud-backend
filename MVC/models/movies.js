@@ -16,6 +16,29 @@ const addMovie = (body) => {
     .returning('*')
 }
 
+const removeMovie = (id) => {
+    return db('movies')
+    .where({
+        id
+    })
+    .del()
+    .returning('*')
+}
+
+const updateMovie = (id, body) => {
+    return db('movies')
+    .where({
+        id
+    })
+    .update({
+        "title":body.title,
+        "director":body.director,
+        "years":body.years,
+        "rating":body.rating,
+        "picture_url":body.picture_url
+    })
+    .returning("*")
+}
 
 
-module.exports = { getAll,getOne,addMovie }
+module.exports = { getAll, getOne, addMovie, removeMovie, updateMovie }

@@ -8,6 +8,8 @@ router.get('/:id', interFaceController.getOne)
 
 router.post('/', interFaceController.addMovie)
 
-router.delete('/:id', interFaceController.remove)
+router.delete('/:id', interFaceController.removeMovie)
+
+router.put('/:id', interFaceController.updateMovie)
 
 module.exports = router

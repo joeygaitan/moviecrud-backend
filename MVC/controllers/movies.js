@@ -19,11 +19,18 @@ const addMovie = (req,res,next)=> {
     })
 }
 
-const remove = (req,res,next)=>{
-    model.remove(req.params.id)
+const removeMovie = (req,res,next)=>{
+    model.removeMovie(req.params.id)
     .then(data=>{
         return res.status(200).send(data)
     })
 }
 
-module.exports = { getAll, getOne,addMovie }
+const updateMovie = (req,res,next)=>{
+    model.updateMovie(req.params.id,body)
+    .then(data=>{
+        return res.status(201).send(data)
+    })
+}
+
+module.exports = { getAll, getOne,addMovie, removeMovie, updateMovie }
