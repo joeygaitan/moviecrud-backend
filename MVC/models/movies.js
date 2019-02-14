@@ -8,6 +8,7 @@ const getAll = () => {
 const getOne = (id) => {
     return db('movies')
     .where({id})
+    .first()
 }
 
 const addMovie = (body) => {

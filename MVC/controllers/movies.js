@@ -27,7 +27,9 @@ const removeMovie = (req,res,next)=>{
 }
 
 const updateMovie = (req,res,next)=>{
-    model.updateMovie(req.params.id,body)
+    console.log(req.body);
+    
+    model.updateMovie(req.params.id,req.body)
     .then(data=>{
         return res.status(201).send(data)
     })

@@ -7,7 +7,11 @@ exports.seed = function(knex, Promise) {
       return knex('movies').insert([
         {id: 1, title: 'matrix', director: 'Lana Wachowski', years: 2003, rating: 4,picture_url: 'blah'},
         {id: 2, title: 'irobot', director: 'Alex Proyas', years: 2004, rating: 3,picture_url: 'blah'},
-        {id: 3, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'}
+        {id: 3, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'},
+        {id: 4, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'},
+        {id: 5, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'},
+        {id: 6, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'},
+        {id: 7, title: 'titanic', director: 'James Cameron', years: 1997, rating: 4,picture_url: 'blah'}
       ])
     })
     .then(()=>{
